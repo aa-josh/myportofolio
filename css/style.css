@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    140deg,
+    rgb(2, 22, 116),
+    rgb(2, 22, 116) 50%,
+    rgb(1, 5, 41) 50%,
+    rgb(1, 5, 41)
+  );
+  overflow: hidden;
+}
+
+.mynavbar {
+  background-color: rgba(160, 181, 238, 0.5) !important;
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.navbar-brand span {
+  font-size: 2.3rem;
+  color: rgb(114, 107, 10);
+  font-family: "Tangerine";
+}
+
+.mynavbar .nav-link {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 200;
+}
+
+.mynavbar .nav-link:hover {
+  color: aqua;
+}
+
+/* Left and right column */
+.column-1 {
+  width: 25%;
+  margin-top: 3rem;
+}
+
+.column-1 img {
+  width: 170px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+/* Middle column */
+.column.middle {
+  width: 70%;
+  margin-top: 3rem;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column-1,
+.column.middle {
+  box-sizing: border-box;
+  padding-top: 5rem;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .offcanvas {
+    background-color: rgb(160, 181, 238);
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2.2rem;
+    text-align: center;
+    color: white;
+  }
+  .offcanvas .offcanvas-header h5 {
+    color: white;
+    font-size: 2rem;
+  }
+  .offcanvas .offcanvas-header h5 span {
+    font-family: "Tangerine";
+    font-size: 2.5rem;
+    color: rgb(114, 107, 10);
+  }
+
+  .home img {
+    width: 100px;
+  }
+}
