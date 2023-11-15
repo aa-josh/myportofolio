@@ -27,6 +27,7 @@ body {
 
 .navbar-brand {
   font-size: 1.7rem;
+  font-weight: 200;
   color: white;
 }
 
@@ -35,8 +36,9 @@ body {
 }
 
 .navbar-brand span {
-  font-size: 2.3rem;
-  color: rgb(114, 107, 10);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(8, 211, 41);
   font-family: "Tangerine";
 }
 
@@ -53,19 +55,25 @@ body {
 /* Left and right column */
 .column-1 {
   width: 25%;
-  margin-top: 3rem;
+  padding-top: 3rem;
 }
 
 .column-1 img {
   width: 170px;
-  margin-top: 40px;
-  border-radius: 10px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
 }
 
 /* Middle column */
 .column.middle {
   width: 70%;
   margin-top: 3rem;
+}
+
+.column.middle p {
+  font-size: 1.3rem;
+  font-weight: 200;
 }
 
 /* Clear floats after the columns */
@@ -92,6 +100,10 @@ body {
     background-color: rgb(160, 181, 238);
   }
 
+  .mynavbar {
+    padding: 1rem 5%;
+  }
+
   .mynavbar .nav-link {
     font-size: 2.2rem;
     text-align: center;
@@ -107,7 +119,20 @@ body {
     color: rgb(114, 107, 10);
   }
 
+  .column-1 {
+    width: 100vw;
+  }
   .home img {
     width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  .column.middle {
+    width: 100vw;
+    display: block;
+    padding: 1rem 6%;
   }
 }
