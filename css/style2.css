@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+  width: 100vw;
+  background: linear-gradient(
+    140deg,
+    rgb(0, 4, 24),
+    rgb(0, 4, 24) 50%,
+    rgb(22, 240, 203) 50%,
+    rgb(22, 240, 203)
+  );
+  overflow: hidden;
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  grid-auto-flow: column;
+  place-content: center;
+}
+
+.mynavbar {
+  background-color: rgba(160, 181, 238, 0.5) !important;
+  padding: 0 5%;
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.navbar-brand span {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(8, 211, 41);
+  font-family: "Tangerine";
+}
+
+.mynavbar .nav-link {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 200;
+}
+
+.mynavbar .nav-link:hover {
+  color: aqua;
+}
+
+.rows {
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 95vw;
+  height: 50vh;
+  margin-top: -7rem;
+}
+
+.rows .row {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 1rem 1rem;
+  mix-blend-mode: difference;
+}
+
+.rows .row h2 {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+.rows .row span {
+  color: aqua;
+  font-family: "Tangerine";
+  font-size: 4rem;
+}
+
+.rows .row p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 200;
+  line-height: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .offcanvas {
+    background-color: rgb(160, 181, 238);
+  }
+
+  .mynavbar {
+    padding: 1rem 5%;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2.2rem;
+    text-align: center;
+    color: white;
+  }
+  .offcanvas .offcanvas-header h5 {
+    color: white;
+    font-size: 2rem;
+  }
+  .offcanvas .offcanvas-header h5 span {
+    font-family: "Tangerine";
+    font-size: 2.5rem;
+    color: rgb(8, 211, 41);
+  }
+
+  .rows .row p {
+    mix-blend-mode: difference;
+  }
+}
