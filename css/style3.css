@@ -12,10 +12,10 @@ body {
   width: 100vw;
   background: linear-gradient(
     140deg,
-    rgb(0, 4, 24),
-    rgb(0, 4, 24) 50%,
-    rgb(22, 240, 203) 50%,
-    rgb(22, 240, 203)
+    rgb(2, 22, 116),
+    rgb(2, 22, 116) 50%,
+    rgb(1, 5, 41) 50%,
+    rgb(1, 5, 41)
   );
   overflow: hidden;
   display: grid;
@@ -57,47 +57,9 @@ body {
   color: aqua;
 }
 
-.rows {
-  border-radius: 10px;
-  width: 95vw;
-  height: 50vh;
-  margin-top: -7rem;
-}
-
-.row {
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 1rem 1rem 1rem;
-  mix-blend-mode: difference;
-}
-
-.row h2 {
-  color: white;
-  font-size: 1.7rem;
-  font-weight: 200;
-}
-.row h3 {
-  color: aqua;
-  font-size: 2rem;
-}
-.row span {
-  color: aqua;
-  font-family: "Tangerine";
-  font-size: 4rem;
-}
-.row p {
-  color: aqua;
-  font-size: 1.1rem;
-  font-weight: 200;
-  line-height: 1.2rem;
-  mix-blend-mode: difference;
-}
-
 @media (max-width: 768px) {
   html {
-    font-size: 80%;
+    font-size: 65%;
   }
 
   .offcanvas {
@@ -121,14 +83,5 @@ body {
     font-family: "Tangerine";
     font-size: 2.5rem;
     color: rgb(8, 211, 41);
-  }
-  .rows {
-    border-radius: 10px;
-    width: 90vw;
-    height: 100vh;
-    margin-top: 3rem;
-  }
-  .row h3 {
-    color: white;
   }
 }
