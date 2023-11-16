@@ -43,7 +43,7 @@ body {
 .navbar-brand span {
   font-size: 2.5rem;
   font-weight: 800;
-  color: rgb(8, 211, 41);
+  color: yellow;
   font-family: "Tangerine";
 }
 
@@ -80,7 +80,9 @@ body {
 }
 .row h3 {
   color: aqua;
-  font-size: 2rem;
+  font-size: 4rem;
+  font-size: 700;
+  font-family: "Tangerine";
 }
 .row span {
   color: aqua;
@@ -97,7 +99,7 @@ body {
 
 @media (max-width: 768px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
 
   .offcanvas {
@@ -120,15 +122,16 @@ body {
   .offcanvas .offcanvas-header h5 span {
     font-family: "Tangerine";
     font-size: 2.5rem;
-    color: rgb(8, 211, 41);
+    color: yellow;
   }
   .rows {
     border-radius: 10px;
     width: 90vw;
     height: 100vh;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
-  .row h3 {
-    color: white;
+  .col-6 {
+    width: 100%;
+    margin-top: -14rem;
   }
 }
