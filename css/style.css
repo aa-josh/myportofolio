@@ -155,20 +155,11 @@ img:hover {
     color: rgb(114, 107, 10);
   }
 
-  .column-1 {
-    width: 100vw;
-  }
   .home img {
-    width: 100px;
+    width: 150px;
     display: block;
     margin: auto;
-    margin-top: 6rem;
-    margin-bottom: 1rem;
-  }
-
-  .column.middle {
-    width: 100vw;
-    display: block;
-    padding: 1rem 6%;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 }
