@@ -9,7 +9,6 @@
 
 body {
   font-family: "Sarabun", sans-serif;
-  height: 100vh;
   width: 100vw;
   background: linear-gradient(
     140deg,
@@ -19,6 +18,11 @@ body {
     rgb(1, 5, 41)
   );
   overflow: hidden;
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  grid-auto-flow: column;
+  place-content: center;
 }
 
 .mynavbar {
@@ -52,43 +56,75 @@ body {
   color: aqua;
 }
 
-/* Left and right column */
-.column-1 {
-  width: 25%;
-  padding-top: 3rem;
+@property --gap {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0;
+}
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
 }
 
-.column-1 img {
-  width: 170px;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  border-radius: 50%;
-}
+img {
+  --border: 15px;
+  --gap: 12px;
+  --color: #fa6900;
 
-/* Middle column */
-.column.middle {
-  width: 70%;
-  margin-top: 3rem;
-}
-
-.column.middle p {
-  font-size: 1.3rem;
-  font-weight: 200;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column-1,
-.column.middle {
+  width: 200px;
+  aspect-ratio: 1;
   box-sizing: border-box;
-  padding-top: 5rem;
+  border-radius: 50%;
+  margin: 20px;
+  cursor: pointer;
+  padding: calc(var(--border) + var(--gap));
+
+  --angle: 90deg;
+  background: radial-gradient(farthest-side, var(--color) 97%, #0000 101%)
+      85.35% 85.35%,
+    conic-gradient(
+      from calc(180deg - var(--angle) / 2),
+      #0000 var(--angle),
+      var(--color) 0
+    ),
+    radial-gradient(farthest-side, var(--color) 97%, #0000 101%) 14.65% 85.35%;
+  background-size: var(--border) var(--border), auto;
+  background-repeat: no-repeat;
+
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #000 calc(99% - calc(var(--border) + var(--gap))),
+    #0000 calc(100% - calc(var(--border) + var(--gap)))
+      calc(99% - var(--border)),
+    #000 calc(100% - var(--border))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #000 calc(99% - calc(var(--border) + var(--gap))),
+    #0000 calc(100% - calc(var(--border) + var(--gap)))
+      calc(99% - var(--border)),
+    #000 calc(100% - var(--border))
+  );
+  transition: --angle 0.4s, --gap 0.4s;
+}
+img:hover {
+  --angle: 0deg;
+  --gap: 5px;
+}
+
+.home h2 {
+  font-size: 4rem;
+  font-family: "Tangerine";
+  text-align: center;
+  color: white;
+}
+
+.home p {
+  font-size: 1.5rem;
   color: white;
   text-align: center;
+  font-weight: 100;
 }
 
 @media (max-width: 768px) {
