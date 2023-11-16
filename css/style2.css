@@ -87,10 +87,11 @@ body {
 }
 
 .rows .row p {
-  color: white;
+  color: aqua;
   font-size: 1.1rem;
   font-weight: 200;
   line-height: 1.2rem;
+  mix-blend-mode: difference;
 }
 
 @media (max-width: 768px) {
