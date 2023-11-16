@@ -58,7 +58,6 @@ body {
 }
 
 .rows {
-  border: 2px solid white;
   border-radius: 10px;
   width: 95vw;
   height: 50vh;
@@ -80,6 +79,12 @@ body {
   font-weight: 200;
 }
 
+.rows .row h3 {
+  color: aqua;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 .rows .row span {
   color: aqua;
   font-family: "Tangerine";
@@ -96,7 +101,7 @@ body {
 
 @media (max-width: 768px) {
   html {
-    font-size: 65%;
+    font-size: 80%;
   }
 
   .offcanvas {
@@ -121,8 +126,10 @@ body {
     font-size: 2.5rem;
     color: rgb(8, 211, 41);
   }
-
-  .rows .row p {
-    mix-blend-mode: difference;
+  .rows {
+    border-radius: 10px;
+    width: 90vw;
+    height: 70vh;
+    margin-top: -3rem;
   }
 }
