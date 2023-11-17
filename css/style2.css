@@ -118,10 +118,6 @@ body {
     color: white;
   }
 
-  span .navbar-toggler-icon {
-    color: white !important;
-  }
-
   .offcanvas .offcanvas-header h5 {
     color: white;
     font-size: 2rem;
