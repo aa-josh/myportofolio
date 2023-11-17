@@ -43,6 +43,10 @@ body {
   color: aqua;
 }
 
+.container button {
+  border: 1px solid white;
+}
+
 .home {
   background: linear-gradient(
     140deg,
