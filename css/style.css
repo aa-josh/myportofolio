@@ -130,8 +130,8 @@ img:hover {
   font-weight: 100;
 }
 
-/* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
   html {
     font-size: 70%;
   }
@@ -159,7 +159,7 @@ img:hover {
   }
 
   .home img {
-    width: 150px;
+    width: 120px;
     display: block;
     margin: auto;
     margin-top: 2rem;
