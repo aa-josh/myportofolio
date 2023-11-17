@@ -1,47 +1,93 @@
+:root {
+  --primary: rgb(255, 238, 0);
+  --bg: black;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  border: none;
   text-decoration: none;
+  border: none;
 }
 
 body {
   font-family: "Sarabun", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  min-height: 2000px;
 }
 
-.mynavbar {
-  background-color: rgba(2, 22, 116, 0.5) !important;
-  padding: 0 5%;
+/* navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6%;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
-.navbar-brand {
-  font-size: 1.7rem;
+.navbar .navbar-logo {
+  font-size: 1.5rem;
   font-weight: 200;
   color: white;
 }
 
-.navbar-brand:hover {
-  color: white;
-}
-
-.navbar-brand span {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: yellow;
+.navbar .navbar-logo span {
+  color: var(--primary);
   font-family: "Tangerine";
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.mynavbar .nav-link {
-  font-size: 1.1rem;
+.navbar .navbar-nav {
+  position: absolute;
+  right: 6%;
+}
+
+.navbar .navbar-nav a {
   color: white;
+  display: inline-block;
+  font-size: 1.1rem;
   font-weight: 200;
+  margin: 0 1rem;
 }
 
-.mynavbar .nav-link:hover {
-  color: aqua;
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
 }
 
 .home {
@@ -56,7 +102,8 @@ body {
   min-height: 100vh;
   margin: 0;
   text-align: center;
-  padding-top: 7rem;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
 }
 
 @property --gap {
@@ -125,54 +172,83 @@ img:hover {
 
 .home p {
   font-size: 1.5rem;
-  color: white;
+  color: var(--primary);
   text-align: center;
   font-weight: 100;
 }
 
-/* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (min-width: 576px) {
+/* Rsponsive */
+/* laptop */
+@media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
+}
+/* tablet */
+@media (max-width: 768.5px) {
+  html {
+    font-size: 75%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .home {
+    padding-top: 25rem;
+    padding-bottom: 20rem;
+  }
+
   .home img {
-    width: 130px;
+    width: 150px;
   }
 }
 
-/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
-@media (max-width: 767.98px) {
+/* hp */
+@media (max-width: 450px) {
   html {
-    font-size: 70%;
-  }
-  .offcanvas {
-    background-color: rgb(160, 181, 238);
+    font-size: 65%;
   }
 
-  .mynavbar {
-    padding: 1rem 5%;
-  }
-
-  .mynavbar .nav-link {
-    font-size: 2.2rem;
-    text-align: center;
-    color: white;
-  }
-  .offcanvas .offcanvas-header h5 {
-    color: white;
-    font-size: 2rem;
-  }
-  .offcanvas .offcanvas-header h5 span {
-    font-family: "Tangerine";
-    font-size: 2.5rem;
-    color: yellow;
+  .home {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 
   .home img {
-    width: 120px;
     display: block;
     margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 0;
+    margin-top: 3rem;
+    width: 130px;
   }
 }
