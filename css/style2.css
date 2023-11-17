@@ -9,25 +9,13 @@
 
 body {
   font-family: "Sarabun", sans-serif;
-  width: 100vw;
-  background: linear-gradient(
-    140deg,
-    rgb(0, 4, 24),
-    rgb(0, 4, 24) 50%,
-    rgb(22, 240, 203) 50%,
-    rgb(22, 240, 203)
-  );
-  overflow: hidden;
-  display: grid;
-  height: 100vh;
-  margin: 0;
-  grid-auto-flow: column;
-  place-content: center;
+  min-height: 2000px;
 }
 
 .mynavbar {
   background-color: rgba(0, 4, 24, 0.5) !important;
   padding: 0 5%;
+  position: fixed;
 }
 
 .navbar-brand {
@@ -58,10 +46,19 @@ body {
 }
 
 .rows {
-  border-radius: 10px;
-  width: 95vw;
-  height: 50vh;
-  margin-top: 1rem;
+  background: linear-gradient(
+    140deg,
+    rgb(0, 4, 24),
+    rgb(0, 4, 24) 50%,
+    rgb(22, 240, 203) 50%,
+    rgb(22, 240, 203)
+  );
+  overflow: hidden;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  grid-auto-flow: column;
+  place-content: center;
 }
 
 .row {

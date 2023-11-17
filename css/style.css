@@ -9,20 +9,7 @@
 
 body {
   font-family: "Sarabun", sans-serif;
-  width: 100vw;
-  background: linear-gradient(
-    140deg,
-    rgb(2, 22, 116),
-    rgb(2, 22, 116) 50%,
-    rgb(1, 5, 41) 50%,
-    rgb(1, 5, 41)
-  );
-  overflow: hidden;
-  display: grid;
-  min-height: 100vh;
-  margin: 0;
-  grid-auto-flow: column;
-  place-content: center;
+  min-height: 2000px;
 }
 
 .mynavbar {
@@ -55,6 +42,21 @@ body {
 
 .mynavbar .nav-link:hover {
   color: aqua;
+}
+
+.home {
+  background: linear-gradient(
+    140deg,
+    rgb(2, 22, 116),
+    rgb(2, 22, 116) 50%,
+    rgb(1, 5, 41) 50%,
+    rgb(1, 5, 41)
+  );
+  overflow: hidden;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  padding-top: 7rem;
 }
 
 @property --gap {
@@ -128,11 +130,11 @@ img:hover {
   font-weight: 100;
 }
 
-@media (max-width: 768px) {
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
   html {
     font-size: 70%;
   }
-
   .offcanvas {
     background-color: rgb(160, 181, 238);
   }
