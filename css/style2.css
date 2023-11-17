@@ -61,7 +61,7 @@ body {
   border-radius: 10px;
   width: 95vw;
   height: 50vh;
-  margin-top: -7rem;
+  margin-top: 1rem;
 }
 
 .row {
@@ -115,6 +115,11 @@ body {
     text-align: center;
     color: white;
   }
+
+  span .navbar-toggler-icon {
+    color: white !important;
+  }
+
   .offcanvas .offcanvas-header h5 {
     color: white;
     font-size: 2rem;
@@ -127,11 +132,11 @@ body {
   .rows {
     border-radius: 10px;
     width: 90vw;
-    height: 100vh;
+    height: fit-content;
     margin-top: 1rem;
+    background-color: blueviolet;
   }
   .col-6 {
     width: 100%;
-    margin-top: -10rem;
   }
 }
