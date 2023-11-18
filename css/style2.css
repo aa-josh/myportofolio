@@ -138,6 +138,9 @@ body {
 
   #hamburger-menu {
     display: inline-block;
+    position: absolute;
+    right: 6%;
+    top: 1.5rem;
   }
 
   .navbar .navbar-nav {
