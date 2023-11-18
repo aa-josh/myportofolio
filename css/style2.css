@@ -31,15 +31,18 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 6%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(2, 1, 66, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  border-radius: 0;
   z-index: 9999;
 }
 
 .navbar h1 {
+  position: absolute;
+  left: 6%;
   font-size: 1.5rem;
   font-weight: 200;
   color: white;
@@ -63,6 +66,7 @@ body {
   font-size: 1.1rem;
   font-weight: 200;
   margin: 0 1rem;
+  text-decoration: none;
 }
 
 .navbar .navbar-nav a:hover {
@@ -95,11 +99,28 @@ body {
   display: none;
 }
 
-.about {
-  background-color: aquamarine;
-  height: fit-content;
-  margin-top: 7rem;
+.section h2,
+.section h3 {
+  color: white;
+  font-family: "Tangerine";
+  font-size: 3.5rem;
   text-align: center;
+  margin-top: 5rem;
+}
+
+.carousel-inner img {
+  height: 75vh !important;
+  border-radius: 10px;
+}
+
+.section h3 {
+  color: rgb(255, 255, 255);
+}
+
+.section p {
+  font-size: 1.3rem;
+  font-weight: 200;
+  mix-blend-mode: difference !important;
 }
 
 /* Rsponsive */
