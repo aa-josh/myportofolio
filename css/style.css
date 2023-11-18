@@ -219,7 +219,7 @@ img:hover {
   }
 }
 /* tablet */
-@media (max-width: 786px) {
+@media (max-width: 600px) {
   html {
     font-size: 75%;
   }
@@ -259,7 +259,7 @@ img:hover {
   }
 
   .home img {
-    width: 130px;
+    width: 120px;
   }
 }
 
@@ -274,6 +274,6 @@ img:hover {
     margin: auto;
     margin-top: 2.5rem;
     margin-bottom: 0.2rem;
-    width: 120px;
+    width: 110px;
   }
 }
