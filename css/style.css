@@ -189,7 +189,7 @@ img:hover {
 }
 
 .home h3 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Tangerine";
   color: yellow;
   text-align: center;
@@ -209,6 +209,10 @@ img:hover {
   font-weight: 700;
   margin-top: 1.2rem;
   margin-bottom: 2rem;
+}
+
+.home h4:hover {
+  color: white;
 }
 
 /* Rsponsive */
