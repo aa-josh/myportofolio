@@ -219,6 +219,16 @@ img:hover {
   }
 }
 /* tablet */
+@media (min-width: 601px) {
+  html {
+    font-size: 75%;
+  }
+
+  .home img {
+    width: 130px;
+  }
+}
+
 @media (max-width: 600px) {
   html {
     font-size: 75%;
@@ -259,7 +269,7 @@ img:hover {
   }
 
   .home img {
-    width: 120px;
+    width: 100px;
   }
 }
 
