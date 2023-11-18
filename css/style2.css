@@ -1,140 +1,158 @@
+:root {
+  --primary: rgb(255, 238, 0);
+  --bg: black;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  border: none;
   text-decoration: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Sarabun", sans-serif;
-  min-height: 2000px;
-}
-
-.mynavbar {
-  background-color: rgba(0, 4, 24, 0.5) !important;
-  padding: 0 5%;
-  position: fixed;
-}
-
-.navbar-brand {
-  font-size: 1.7rem;
-  font-weight: 200;
+  background-color: var(--bg);
   color: white;
-}
-
-.navbar-brand:hover {
-  color: white;
-}
-
-.navbar-brand span {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: yellow;
-  font-family: "Tangerine";
-}
-
-.mynavbar .nav-link {
-  font-size: 1.1rem;
-  color: white;
-  font-weight: 200;
-}
-
-.mynavbar .nav-link:hover {
-  color: aqua;
-}
-
-.rows {
-  background: linear-gradient(
-    140deg,
-    rgb(0, 4, 24),
-    rgb(0, 4, 24) 50%,
-    rgb(22, 240, 203) 50%,
-    rgb(22, 240, 203)
-  );
-  overflow: hidden;
-  display: grid;
   height: 100vh;
-  margin: 0;
-  grid-auto-flow: column;
-  place-content: center;
+  /* min-height: 2000px; */
 }
 
-.row {
-  height: 90%;
+/* navbar */
+.navbar {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin: 1rem 1rem 1rem 1rem;
-  mix-blend-mode: difference;
+  padding: 1rem 6%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
-.row h2 {
-  color: white;
-  font-size: 1.7rem;
+.navbar h1 {
+  font-size: 1.5rem;
   font-weight: 200;
+  color: white;
 }
-.row h3 {
-  color: aqua;
-  font-size: 4rem;
-  font-size: 700;
+
+.navbar h1 span {
+  color: var(--primary);
   font-family: "Tangerine";
+  font-size: 2rem;
+  font-weight: 700;
 }
-.row span {
-  color: aqua;
-  font-family: "Tangerine";
-  font-size: 4rem;
+
+.navbar .navbar-nav {
+  position: absolute;
+  right: 6%;
 }
-.row p {
-  color: aqua;
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
   font-size: 1.1rem;
   font-weight: 200;
-  line-height: 1.2rem;
-  mix-blend-mode: difference;
+  margin: 0 1rem;
 }
 
-/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
 }
 
-/* // `md` applies to small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.about {
+  background-color: aquamarine;
+  height: fit-content;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+/* Rsponsive */
+/* laptop */
+@media (max-width: 1366px) {
   html {
-    font-size: 70%;
+    font-size: 85%;
+  }
+}
+/* tablet */
+@media (max-width: 786px) {
+  html {
+    font-size: 75%;
   }
 
-  .offcanvas {
-    background-color: rgb(160, 181, 238);
+  #hamburger-menu {
+    display: inline-block;
   }
 
-  .mynavbar {
-    padding: 1rem 5%;
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
   }
 
-  .mynavbar .nav-link {
-    font-size: 2.2rem;
-    text-align: center;
-    color: white;
+  .navbar .navbar-nav.active {
+    right: 0;
   }
 
-  .offcanvas .offcanvas-header h5 {
-    color: white;
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
     font-size: 2rem;
   }
-  .offcanvas .offcanvas-header h5 span {
-    font-family: "Tangerine";
-    font-size: 2.5rem;
-    color: yellow;
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
   }
-  .rows {
-    border-radius: 10px;
-    width: 90vw;
-    height: fit-content;
-    margin-top: 1rem;
-    background-color: blueviolet;
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
   }
-  .col-6 {
-    width: 100%;
+}
+
+/* hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 65%;
   }
 }

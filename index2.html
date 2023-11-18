@@ -1,99 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>lezat</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,500;0,700;1,500;1,700&family=Tangerine:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/style2.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top mynavbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">its <span>Me</span></a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              its <span>Me</span>
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="index.html">Home</a>
-              <a class="nav-link" href="index2.html">My Portofolio</a>
-              <a class="nav-link" href="index3.html">My Project</a>
-              <a class="nav-link" href="index4">My Contact</a>
-            </div>
-          </div>
-        </div>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <h1>its <span>Me</span></h1>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="index2.html">Tentang saya</a>
+        <a href="#menu">Project Saya</a>
+        <a href="#contact">Kontak Saya</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
+    <!-- navbar end -->
 
-    <div class="rows">
-      <div class="row g-0 text-center">
-        <div class="col-sm-6 col-md-4">
-          <h2>My name <span>Aa Soni</span></h2>
-          <p>I am someone who is learning programming</p>
-          <p>Even though I am old, my enthusiasm for learning is very great</p>
-          <p>
-            Hopefully in the future I can understand programming, and can teach
-            it to my childrens
-          </p>
-        </div>
-        <div class="col-6 col-md-8">
-          <h3>what am I doing now</h3>
-          <p>I currently work at PT. Gaya Pantes Semestama</p>
-          <p>I work in design and production</p>
-          <p>
-            Even though the current wage cannot meet the family's needs, at
-            least it is still possible to survive
-          </p>
-          <p>
-            I really hope to get results that can meet my family's needs, with
-            the abilities I have
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      feather.replace();
+    </script>
+    <!-- my javascript -->
+    <script src="js/script.js"></script>
   </body>
 </html>
