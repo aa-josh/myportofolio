@@ -28,14 +28,18 @@ body {
   mix-blend-mode: difference !important;
 }
 
-.section h2,
-.section h3 {
+.section h2 {
   color: white;
   font-family: "Tangerine";
   font-size: 3.5rem;
   text-align: center;
   margin-top: 2rem;
   mix-blend-mode: difference;
+}
+
+.section .carousel-caption h3 {
+  color: var(--bg) !important;
+  font-size: 4rem;
 }
 
 .carousel-inner img {
