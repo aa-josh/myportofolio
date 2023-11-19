@@ -31,7 +31,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 6%;
-  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -217,19 +216,22 @@ img:hover {
 
 /* Rsponsive */
 /* laptop */
-@media (max-width: 1366px) {
+@media (min-width: 768px) {
   html {
-    font-size: 85%;
+    font-size: 90%;
+  }
+  .home img {
+    width: 180px;
   }
 }
 /* tablet */
 @media (min-width: 601px) {
   html {
-    font-size: 75%;
+    font-size: 85%;
   }
 
   .home img {
-    width: 180px;
+    width: 150px;
   }
 }
 
@@ -273,7 +275,7 @@ img:hover {
   }
 
   .home img {
-    width: 100px;
+    width: 110px;
   }
 }
 
